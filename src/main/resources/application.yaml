@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./camunda-h2-database
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+camunda:
+  bpm:
+    admin-user:
+      id: demo
+      password: demo
+      firstName: Demo
+      lastName: User
+    filter:
+      create: All tasks
+    authorization:
+      enabled: true
+    job-execution:
+      enabled: true
+    database:
+      schema-update: true
+    # ⭐ AJOUTER CETTE SECTION POUR DÉPLOYER LE BPMN ⭐
+    deployment-resource-pattern: classpath*:**/*.bpmn
+    
+server:
+  port: 8080
+
+logging:
+  level:
+    org.camunda: INFO
+    org.springframework: INFO

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<lln>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.lln.workflow.Application",
+            "projectName": "lln",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
